@@ -34,15 +34,13 @@ try {
 	}
 }
 var resultSize = result.size();
-var tmp = new XML('<llistaCites></llistaCites>');
+msg = new XML('<llistaCites></llistaCites>');
 logger.info("Nombre de resultats: " + resultSize);
 
 if(resultSize>0){
 	for(var i = 0;i<resultSize;i++){
 		result.next();
-		tmp.appendChild(new XML('<cita><dataCita>'+result.getString(1)+'</dataCita><horaCita>'+result.getString(2)+'</horaCita><hc>'+result.getString(3)+'</hc><tis>'+result.getString(4)+'</tis><dni>'+result.getString(5)+'</dni><nom>'+result.getString(6)+'</nom><cognom1>'+result.getString(7)+'</cognom1><cognom2>'+result.getString(8)+'</cognom2><IDCita>'+result.getString(9)+'</IDCita><recursID>'+result.getString(10)+'</recursID><recurs>'+result.getString(11)+'</recurs><tipusRecursID>'+result.getString(12)+'</tipusRecursID><tipusRecurs>'+result.getString(13)+'</tipusRecurs><tipusEco>'+result.getString(14)+'</tipusEco><entitat>'+result.getString(15)+'</entitat><serveiID>'+result.getString(16)+'</serveiID><servei>'+result.getString(17)+'</servei><bloquejat>'+result.getString(18)+'</bloquejat></cita>'))
+		msg.appendChild(new XML('<cita><dataCita>'+result.getString(1)+'</dataCita><horaCita>'+result.getString(2)+'</horaCita><hc>'+result.getString(3)+'</hc><tis>'+result.getString(4)+'</tis><dni>'+result.getString(5)+'</dni><nom>'+result.getString(6)+'</nom><cognom1>'+result.getString(7)+'</cognom1><cognom2>'+result.getString(8)+'</cognom2><IDCita>'+result.getString(9)+'</IDCita><recursID>'+result.getString(10)+'</recursID><recurs>'+result.getString(11)+'</recurs><tipusRecursID>'+result.getString(12)+'</tipusRecursID><tipusRecurs>'+result.getString(13)+'</tipusRecurs><tipusEco>'+result.getString(14)+'</tipusEco><entitat>'+result.getString(15)+'</entitat><serveiID>'+result.getString(16)+'</serveiID><servei>'+result.getString(17)+'</servei><bloquejat>'+result.getString(18)+'</bloquejat></cita>'))
         }
 }
-msg = tmp;
-logger.info("OUT: " + tmp);
-logger.info("OUT2: " + msg);
+logger.info("OUT: " + msg);
