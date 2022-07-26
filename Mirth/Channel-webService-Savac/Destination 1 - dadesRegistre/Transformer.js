@@ -11,9 +11,9 @@ logger.info("IN: " + dni);
 var dbConn;
 var result;
 var driver = "oracle.jdbc.OracleDriver";
-var address = "jdbc:oracle:thin:@192.168.1.217:1521:SAVAC";
-var username = 'ACCESOEXT';
-var password = 'ACCESOEXT';
+var address = "jdbc:oracle:thin:@<<IP>>:<<port>>:<<nomBBDD>>";
+var username = '<<usuariBBDD>>';
+var password = '<<contrasenyaBBDD>>';
 
 try {
 	dbConn = DatabaseConnectionFactory.createDatabaseConnection(driver, address, username, password);
