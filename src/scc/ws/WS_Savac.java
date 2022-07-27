@@ -74,24 +74,23 @@ public class WS_Savac extends AcceptMessage {
        
        return null;
     }
-    /*
     @WebMethod
-    public Pacient dadesPacient(@WebParam(name = "idUsuari") String idUsuari) {
-        String response = webServiceReceiver.processData("dadesPacient|"+idUsuari);
-        Pacient pacient = new Pacient();
-
+    public LlistaCites citesAvui(@WebParam(name = "idUsuari") String idUsuari)  {
+    	String response = webServiceReceiver.processData("citesAvui|"+idUsuari);
+        LlistaCites llistaC = new LlistaCites();
+        
         if (response != null) {
-        	 try {
-	        		 JAXBContext jaxbContext = JAXBContext.newInstance(Pacient.class);
+       	 try {
+	        		 JAXBContext jaxbContext = JAXBContext.newInstance(LlistaCites.class);
 	        		 Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 	        		 StringReader reader = new StringReader(response);
-	        		 pacient = (Pacient) unmarshaller.unmarshal(reader);
-        		 } catch (JAXBException e) {
-        		 e.printStackTrace();
-        		 }
-            return pacient;
-        }
-        
-        return null;
-    }*/
+	        		 llistaC = (LlistaCites) unmarshaller.unmarshal(reader);
+       		 } catch (JAXBException e) {
+       		 e.printStackTrace();
+       		 }
+           return llistaC;
+       }
+       
+       return null;
+    }
 }
